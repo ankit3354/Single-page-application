@@ -4,6 +4,7 @@ import CovidCasesUs from "./useApi/CovidCasesUs";
 import Anime from "./useApi/Anime";
 import Music from "./useApi/Music";
 
+
 function ApiPage() {
   const [showCovid, setShowCovid] = useState(false);
   const [showGames, setShowGames] = useState(false);
@@ -39,7 +40,7 @@ function ApiPage() {
   };
 
   return (
-    <div className="flex flex-wrap text-center justify-start items-center bg-gradient-to-r from-cyan-500 to-blue-500  min-h-screen">
+    <div className={`flex flex-wrap text-center justify-start items-center bg-gradient-to-r from-sky-400 to-blue-600  min-h-screen overflow-hidden`}>
       <div className="flex flex-wrap justify-evenly w-screen gap-5 pt-4">
         <div
           onClick={Covidhandler}

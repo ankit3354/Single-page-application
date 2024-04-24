@@ -9,6 +9,78 @@ import { SiLeetcode } from "react-icons/si";
 import { SiCodesignal } from "react-icons/si";
 
 function Footer() {
+  const navLinks = [
+    {
+      label: "Home",
+      href: "/",
+      isActive: "text-blue-200 ",
+      NoActive: "text-gray-600",
+    },
+    {
+      label: "Password Generator",
+      href: "/passwordgenerator",
+      isActive: "text-blue-200 ",
+      NoActive: "text-gray-600",
+    },
+    {
+      label: "Calculator",
+      href: "/calculator",
+      isActive: "text-blue-200 ",
+      NoActive: "text-gray-600",
+    },
+    {
+      label: "Todo List",
+      href: "/todolist",
+      isActive: "text-blue-200 ",
+      NoActive: "text-gray-600",
+    },
+    {
+      label: "Api Page",
+      href: "/apipage",
+      isActive: "text-blue-200 ",
+      NoActive: "text-gray-600",
+    },
+  ];
+
+  const SocialMediaList = [
+    {
+      href: "https://mail.google.com/mail/u/0/#inbox",
+      icon: (
+        <ImMail4 className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+    {
+      href: "https://github.com/ankit3354",
+      icon: (
+        <RxGithubLogo className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+    {
+      href: "https://www.linkedin.com/in/ankit3354/",
+      icon: (
+        <FaLinkedin className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+    {
+      href: "https://replit.com/@AnkitVishwaka21",
+      icon: (
+        <SiReplit className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+    {
+      href: "https://www.fiverr.com/ankit3354?up_rollout=true#!",
+      icon: (
+        <TbBrandFiverr className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+    {
+      href: "https://leetcode.com/problemset/",
+      icon: (
+        <SiLeetcode className="text-cyan-600 hover:text-cyan-300   text-3xl" />
+      ),
+    },
+  ];
+  
   return (
     <div className="relative flex max-w-full flex-col justify-end overflow-hidden">
       <div className="relative min-w-full bg-gray-900 px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto  sm:px-10">
@@ -21,134 +93,39 @@ function Footer() {
               </span>
             </Link>
           </div>
-          <div className="">
+          {/* footer Navlinks  */}
+          <div>
             <ul className="flex flex-row flex-wrap justify-center gap-2 rounded-lg  px-4 py-2">
-              <li className="">
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/passwordgenerator"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Password Generator
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/calculator"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Calculator
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/currencyconverter"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Currency Converter
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/todolist"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Todo List
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/apipage"
-                  className={({ isActive }) =>
-                    `duration-200 font-medium  ${
-                      isActive ? "text-blue-200 " : "text-gray-600"
-                    } active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`
-                  }
-                >
-                  Api Page
-                </NavLink>
-              </li>
+              {navLinks.map((data, i) => (
+                <li key={i}>
+                  <NavLink
+                    to={data.href}
+                    className={`${(isActive) =>
+                      `${
+                        isActive ? data.isActive : data.NoActive
+                      } `}} duration-200 text-blue-200 font-medium active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`}
+                  >
+                    {data.label}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
+
+
+            {/* footer social lists  */}
           <div>
             <ul className="flex flex-row flex-wrap justify-evenly gap-2 rounded-lg  px-4 py-2">
-              <li className="px-4 ">
-                <a
-                  href="https://mail.google.com/mail/u/0/#inbox"
-                  className="sm:cursor-pointer"
-                >
-                  <ImMail4 className="text-cyan-600 hover:text-cyan-300  text-3xl" />
-                </a>
-              </li>
-              <li className="px-4 ">
-                <a
-                  href="https://github.com/ankit3354"
-                  className="sm:cursor-pointer"
-                >
-                  <RxGithubLogo className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-                </a>
-              </li>
-              <li className="px-4 ">
-                <a
-                  href="https://www.linkedin.com/in/ankit3354/"
-                  className="sm:cursor-pointer"
-                >
-                  <FaLinkedin className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-                </a>
-              </li>
-              <li className="px-4 ">
-                <a
-                  href="https://replit.com/@AnkitVishwaka21"
-                  className="sm:cursor-pointer"
-                >
-                  <SiReplit className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-                </a>
-              </li>
-              <li className="px-4">
-                <a
-                  href="https://www.fiverr.com/ankit3354?up_rollout=true#!"
-                  className="sm:cursor-pointer"
-                >
-                  <TbBrandFiverr className="text-cyan-600 hover:text-cyan-300 text-3xl" />
-                </a>
-              </li>
-              <li className="px-4">
-                <a
-                  href="https://leetcode.com/problemset/"
-                  className="sm:cursor-pointer"
-                >
-                  <SiLeetcode className="text-cyan-600 hover:text-cyan-300  text-3xl" />
-                </a>
-              </li>
+              {SocialMediaList.map((data, i) => (
+                <li key={i} className="px-4">
+                  <a href={data.href} className="cursor-pointer">
+                    {data.icon}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
+
           <p className="m-2 w-full border bg-white"></p>
           <span className="flex flex-wrap sm:justify-center font-semibold text-gray-600 font-mono">
             Ankit Vishwakarma &copy;copyright | All right reserved.

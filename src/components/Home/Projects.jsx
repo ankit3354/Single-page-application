@@ -52,42 +52,9 @@ function Projects({ id }) {
     },
   ];
 
-  const [IsVisible, setIsVisible] = useState(false);
-  const skillRef = useRef(null);
-  const { scrollYProgress } = useScroll();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.4 }
-    );
-
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => {
-      if (skillRef.current) {
-        observer.unobserve(skillRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <motion.main
-      ref={skillRef}
-      style={{ scaleX: scrollYProgress }}
-      className="container flex flex-col bg-teal-950 pt-16 sm:max-w-full sm:mx-auto ring-gray-900/5 shadow-xl ring-1 transition-all"
-    >
-      <div
-        initial={{ opacity: 0 }}
-        animate={IsVisible ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-      >
+    <main className="container flex flex-col bg-teal-950 pt-16 sm:max-w-full sm:mx-auto ring-gray-900/5 shadow-xl ring-1 transition-all">
+      <div>
         <p className="text-2xl font-bold text-center text-white/50 uppercase underline underline-offset-4">
           Projects.
         </p>
@@ -142,7 +109,7 @@ function Projects({ id }) {
           </div>
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 }
 

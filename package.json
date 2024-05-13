@@ -13,6 +13,8 @@
     "@reduxjs/toolkit": "^2.2.2",
     "axios": "^1.6.8",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.1.7",
+    "locomotive-scroll": "^5.0.0-beta.12",
     "logrocket": "^8.1.0",
     "react": "^18.2.0",
     "react-color": "^2.19.3",

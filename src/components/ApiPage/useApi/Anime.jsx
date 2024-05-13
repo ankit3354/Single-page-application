@@ -1,6 +1,8 @@
 import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 function Anime() {
+  const locomotiveScroll = new LocomotiveScroll();
   const AnimeCharaters = [
     {
       id: 2145,
@@ -150,21 +152,31 @@ function Anime() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center items-center text-center border">
-      {AnimeCharaters.map((Anime) => (
-        <div
-          key={Anime.id}
-          className="flex flex-wrap border text-white justify-center p-4 bg-transparent w-80 h-96 rounded-md mx-2 my-3 overflow-hidden"
-        >
-          <li className="sm:font-serif font-bold text-xl border border-white w-full flex justify-center items-center px-2 mb-3">
-            Anime : {Anime.anime}
-          </li>
-          <p className="sm:font-mono "><strong>Quote</strong> : {Anime.quote}</p>
-          <p className="p-2 font-semibold text-xl">
-            Character : {Anime.character}
-          </p>
-        </div>
-      ))}
+    <div className="flex flex-wrap justify-center items-center text-center ">
+      <div>
+        <h1 className="text-2xl text-white text-center  mt-4 p-2 mb-2 font-semibold">
+          Anime Character's Details
+        </h1>
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center text-center">
+        {AnimeCharaters.map((Anime) => (
+          <div
+            key={Anime.id}
+            className="flex flex-wrap border text-white justify-center p-4 bg-transparent w-80 h-96 rounded-md mx-2 my-3 overflow-hidden"
+          >
+            <li className="sm:font-serif font-bold text-xl border border-white w-full flex justify-center items-center px-2 mb-3">
+              Anime : {Anime.anime}
+            </li>
+            <p className="sm:font-mono ">
+              <strong>Quote</strong> : {Anime.quote}
+            </p>
+            <p className="p-2 font-semibold text-xl">
+              Character : {Anime.character}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

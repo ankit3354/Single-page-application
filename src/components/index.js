@@ -3,9 +3,11 @@ import ApiPage from "./ApiPage/ApiPage";
 import Home from "./Home/Home";
 import Footer from "./Footer/Footer";
 import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
-import TodoList from "./TodoList/TodoList";
 import Calculator from "./Calculator/Calculator";
 import CurrencyConvertor from "./CurrencyConvertor/CurrencyConvertor";
+import Skill from "./Home/Skill";
+import Projects from "./Home/Projects";
+import React_Cards from "./React_Cards/ReactCards";
 
 export const Bio = {
   resume:
@@ -18,7 +20,9 @@ export {
   Home,
   Footer,
   PasswordGenerator,
-  TodoList,
   Calculator,
   CurrencyConvertor,
+  Skill,
+  Projects,
+  React_Cards,
 };

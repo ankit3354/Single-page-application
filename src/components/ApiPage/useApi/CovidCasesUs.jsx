@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import LocomotiveScroll from "locomotive-scroll";
 
 function CovidCasesUs() {
-  const [loading, setLoading] = useState(true);
+  const locomotiveScroll = new LocomotiveScroll();
+  const [loading, setLoading] = useState(false);
   const [Covid, setVirus] = useState([]);
 
   useEffect(() => {
@@ -25,20 +27,22 @@ function CovidCasesUs() {
 
   return (
     <>
-      <div className="overflow-hiden">
-        <h1 className="text-2xl text-center w-full mt-4 p-2 mb-2 font-semibold">
-          Covid Cases in US States
-        </h1>
+      <div className="container flex flex-wrap justify-center items-center text-center ">
+        <div>
+          <h1 className="text-2xl text-white text-center w-full mt-4 p-2 mb-2 font-semibold">
+            Covid Cases in US States
+          </h1>
+        </div>
 
-        <div className="overflow-hiden">
+        <div className="flex flex-wrap justify-center items-center text-center overflow-hiden">
           {loading ? (
-            <p>Loading...</p>
+            <p className="text-4xl">Loading...</p>
           ) : (
             <div className="flex flex-wrap justify-center w-full overflow-hidden ">
               {Covid.map((cases) => (
                 <div
                   key={cases.state}
-                  className="bg-yellow-900 rounded-lg text-white my-2 mx-2 p-4 border w-full sm:min-[320px]:w-80  h-96 overflow-hidden flex flex-wrap justify-center "
+                  className="rounded-lg text-white my-2 mx-2 p-4 border w-full sm:min-[320px]:w-80  h-96 overflow-hidden flex flex-wrap justify-center "
                 >
                   <h1 className="p-2 font-serif text-2xl flex flex-wrap justify-center items-center">
                     State : {cases.state}

@@ -7,7 +7,7 @@ function Logo() {
     <>
       <div>
         <Link to="/">
-          <SiCodesignal className="text-2xl text-cyan-400 hover:text-cyan-600" />
+          <SiCodesignal className="text-2xl text-cyan-500 hover:text-cyan-200" />
         </Link>
       </div>
     </>

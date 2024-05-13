@@ -1,6 +1,8 @@
 import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 function GamingApi() {
+  const locomotiveScroll = new LocomotiveScroll();
   const games = [
     {
       internalName: "PRINCEOFPERSIATHESANDSOFTIME",
@@ -456,30 +458,41 @@ function GamingApi() {
     },
   ];
   return (
-    <div className="flex flex-wrap justify-center text-center items-center bg-transparent min-h-screen gap-5">
-      {games.map((game) => (
-        <div key={game.gameID} className="border text-white ">
-          <ul className="p-4 rounded-md ">
-            <li className="bg-gray-900 rounded-md grid justify-center text-center sm:items-center py-4 w-80 h-96">
-              <div className="flex items-center justify-center w-full">
-                <img src={game.thumb} alt="" className="sm:w-80 my-2 " />
-              </div>
-              <button className=" m-4">
-                <a
-                  href={game.metacriticLink}
-                  className="border rounded-md p-2 px-4 sm:hover:bg-gray-800"
-                >
-                  visit site
-                </a>
-              </button>
-              <h1 className="p-2 font-medium text-xl">Game : {game.title}</h1>
-              <div>
-                <p className="sm:font-serif">Rating : {game.dealRating}</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      ))}
+    <div className="container flex flex-wrap justify-center items-center text-center min-h-screen gap-5">
+      <div>
+        <h1 className="text-2xl text-center text-white mt-4 p-2 mb-2 font-semibold">
+          All Game's
+        </h1>
+      </div>
+      <div className="flex flex-wrap justify-center items-center text-center">
+        {games.map((game) => (
+          <div key={game.gameID} className="border text-white">
+            <ul className="p-4 rounded-md flex">
+              <li className="rounded-md grid justify-center text-center sm:items-center py-4 w-80 h-96">
+                <div className="flex items-center justify-center w-full">
+                  <img
+                    src={game.thumb}
+                    alt="Game-Image"
+                    className="w-full sm:w-80 my-2 "
+                  />
+                </div>
+                <button className="m-4">
+                  <a
+                    href={game.metacriticLink}
+                    className="border rounded-md p-2 px-4 sm:hover:bg-gray-800"
+                  >
+                    visit site
+                  </a>
+                </button>
+                <h1 className="p-2 font-medium text-xl">Game : {game.title}</h1>
+                <div>
+                  <p className="sm:font-serif">Rating : {game.dealRating}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

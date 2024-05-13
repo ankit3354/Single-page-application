@@ -80,10 +80,10 @@ function Footer() {
       ),
     },
   ];
-  
+
   return (
-    <div className="relative flex max-w-full flex-col justify-end overflow-hidden">
-      <div className="relative min-w-full bg-gray-900 px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto  sm:px-10">
+    <div className="relative flex bg-teal-950 max-w-full flex-col justify-end overflow-hidden">
+      <div className="relative min-w-full  bg-black/50 px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto  sm:px-10">
         <div className="mx-auto flex max-w-full flex-col items-center justify-center text-center gap-6">
           <div>
             <Link to="/" className="items-center ">
@@ -112,8 +112,7 @@ function Footer() {
             </ul>
           </div>
 
-
-            {/* footer social lists  */}
+          {/* footer social lists  */}
           <div>
             <ul className="flex flex-row flex-wrap justify-evenly gap-2 rounded-lg  px-4 py-2">
               {SocialMediaList.map((data, i) => (

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 function Arrorr() {
+  const locomotiveScroll = new LocomotiveScroll();
   const songs = [
     {
       _id: "660930da366c0bcfb213f977",
@@ -425,8 +426,13 @@ function Arrorr() {
   ];
 
   return (
-    <div>
-      <div className="flex flex-wrap justify-between  border p-4 gap-5">
+    <div className="flex flex-wrap justify-center items-center text-center">
+      <div>
+        <h1 className="text-2xl text-white text-center  mt-4 p-2 mb-2 font-semibold">
+          Pop Music List
+        </h1>
+      </div>
+      <div className="flex flex-wrap justify-evenly items-center border gap-5">
         {songs.map((song) => (
           <li
             key={song["_id"]}
@@ -436,9 +442,9 @@ function Arrorr() {
               <img src={song.img} alt="" className="w-72" />
             </div>
             <p className="px-2 font-mono text-xl py-2 font-semibold text-white">
-              <strong className="text-black ">Song</strong> : {song.name}
+              <strong className="">Song</strong> : {song.name}
             </p>
-            <p className="px-2 py-2 text-xl font-bold font-mono">{song.uNm}</p>
+            <p className="px-2 py-2 text-xl font-bold font-mono text-cyan-300">{song.uNm}</p>
           </li>
         ))}
       </div>

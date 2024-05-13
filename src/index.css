@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Ubuntu", sans-serif;
+}
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
@@ -14,6 +17,251 @@
   font-weight: 400;
   font-style: normal;
 }
-*{
-  font-family: "Ubuntu", sans-serif ;
+
+/* .bar{
+  background: red;
+} */
+
+.Technical-bars .bar .info {
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: #163756;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background: cyan;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line.html span {
+  width: 80%;
+}
+.progress-line.css span {
+  width: 80%;
+}
+.progress-line.javascript span {
+  width: 60%;
+}
+.progress-line.reactjs span {
+  width: 50%;
+}
+.progress-line.cpp span {
+  width: 80%;
+}
+.progress-line.tailwind span {
+  width: 80%;
+}
+.progress-line.bootstrap span {
+  width: 80%;
+}
+
+.progress-line.English span {
+  width: 60%;
+}
+.progress-line.Hindi span {
+  width: 99%;
+}
+.progress-line.French span {
+  width: 20%;
+}
+
+/* 80% */
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: -20px;
+  padding: 1px 8px;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  border-radius: 3px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.html span::after {
+  content: "80%";
+  border-radius: 10px;
+}
+.progress-line.css span::after {
+  content: "80%";
+  border-radius: 10px;
+}
+.progress-line.javascript span::after {
+  content: "60%";
+  border-radius: 10px;
+}
+.progress-line.reactjs span::after {
+  content: "50%";
+  border-radius: 10px;
+}
+.progress-line.cpp span::after {
+  content: "80%";
+  border-radius: 10px;
+}
+.progress-line.tailwind span::after {
+  content: "80%";
+  border-radius: 10px;
+}
+.progress-line.bootstrap span::after {
+  content: "80%";
+  border-radius: 10px;
+}
+
+.progress-line.English span::after {
+  content: "60%";
+  border-radius: 10px;
+}
+.progress-line.Hindi span::after {
+  content: "99%";
+  border-radius: 10px;
+}
+.progress-line.French span::after {
+  content: "20%";
+  border-radius: 10px;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  border-top-color: #e0e0e0;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Professinal Skills  */
+
+.radial-bar {
+  align-items: flex-start;
+}
+
+.radial-bars .radial-bar {
+  /* width: 50%; */
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 120px;
+  height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+
+.path {
+  stroke-width: 10;
+  stroke: aqua;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+
+.path-1 {
+  animation: animate-path1 1 1s linear forwards;
+}
+.path-2 {
+  animation: animate-path2 1 1s linear forwards;
+}
+.path-3 {
+  animation: animate-path3 1 1s linear forwards;
+}
+.path-4 {
+  animation: animate-path4 1 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 25;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.progress-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
 }

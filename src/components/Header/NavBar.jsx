@@ -12,53 +12,27 @@ function NavBar() {
     {
       label: "Home",
       href: "/",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
       scrollToId: "home",
-    },
-    {
-      label: "Projects",
-      href: "",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
-      scrollToId: "projects",
-    },
-    {
-      label: "Skills",
-      href: "",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
-      scrollToId: "skills",
     },
     {
       label: "Currency Convertor",
       href: "/currencyconverter",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
     },
     {
-      label: "Password Generator",
+      label: "Password Generator ",
       href: "/passwordgenerator",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
     },
     {
       label: "Calculator",
       href: "/calculator",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
     },
     {
       label: "React Cards",
-      href: "/react_cards",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
+      href: "/reactcards",
     },
     {
       label: "Api Page",
       href: "/apipage",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-700",
     },
   ];
 
@@ -112,11 +86,16 @@ function NavBar() {
               <li key={i} className="list-none">
                 <NavLink
                   to={data.href}
-                  onClick={() => handleScrollToSection(data.scrollToId)}
-                  className={`${(isActive) =>
-                    `${
-                      isActive ? data.isActive : data.NoActive
-                    } `}} flex duration-200 border-gray-100 hover:bg-gray-500 lg:hover:bg-transparent lg:border-0 hover:text-blue-200  focus:border-b-2 text-center px-3 text-blue-200 w-fit rounded-lg`}
+                  onClick={() => {
+                    handleScrollToSection(data.scrollToId);
+                    setIsOpen(false);
+                  }}
+                  className={({ isActive }) => `
+                  ${
+                    isActive
+                      ? "text-cyan-300 decoration-teal-700 underline underline-offset-4"
+                      : "text-cyan-600"
+                  } flex w-fit  text-center duration-200 lg:p-0 px-3 hover:text-cyan-300`}
                 >
                   {data.label}
                 </NavLink>
@@ -134,10 +113,12 @@ function NavBar() {
                   <NavLink
                     to={data.href}
                     onClick={() => handleScrollToSection(data.scrollToId)}
-                    className={`${(isActive) =>
-                      `${
-                        isActive ? data.isActive : data.NoActive
-                      } `}} hidden lg:block block pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-200 lg:p-0 focus:border-b-2 text-blue-200 `}
+                    className={({ isActive }) => `
+                     ${
+                       isActive
+                         ? "text-cyan-300 decoration-teal-700 underline underline-offset-8"
+                         : "text-cyan-600"
+                     }  hidden lg:block duration-200 lg:p-0 pr-4 pl-3 hover:text-cyan-300`}
                   >
                     {data.label}
                   </NavLink>

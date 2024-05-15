@@ -13,32 +13,27 @@ function Footer() {
     {
       label: "Home",
       href: "/",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-600",
+      scrollToId: "home",
     },
     {
-      label: "Password Generator",
+      label: "Currency Convertor",
+      href: "/currencyconverter",
+    },
+    {
+      label: "Password Generator ",
       href: "/passwordgenerator",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-600",
     },
     {
       label: "Calculator",
       href: "/calculator",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-600",
     },
     {
-      label: "Todo List",
-      href: "/todolist",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-600",
+      label: "React Cards",
+      href: "/reactcards",
     },
     {
       label: "Api Page",
       href: "/apipage",
-      isActive: "text-blue-200 ",
-      NoActive: "text-gray-600",
     },
   ];
 
@@ -86,6 +81,7 @@ function Footer() {
       <div className="relative min-w-full  bg-black/50 px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto  sm:px-10">
         <div className="mx-auto flex max-w-full flex-col items-center justify-center text-center gap-6">
           <div>
+            {/* Logo Icon  */}
             <Link to="/" className="items-center ">
               <span className="flex justify-center items-center  text-xl gap-2 w-auto sm:font-sans font-bold text-cyan-600 hover:text-cyan-400">
                 <SiCodesignal />
@@ -100,10 +96,12 @@ function Footer() {
                 <li key={i}>
                   <NavLink
                     to={data.href}
-                    className={`${(isActive) =>
-                      `${
-                        isActive ? data.isActive : data.NoActive
-                      } `}} duration-200 text-blue-200 font-medium active:border-b-2 focus:border-b-2 py-1 px-2 hover:text-blue-200`}
+                    className={({ isActive }) => `
+                    ${
+                      isActive
+                        ? "text-cyan-300 decoration-teal-700 underline underline-offset-8"
+                        : "text-cyan-600"
+                    } font-medium  duration-200 py-1 px-2 hover:text-cyan-300`}
                   >
                     {data.label}
                   </NavLink>

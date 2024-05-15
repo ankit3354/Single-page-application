@@ -4,7 +4,7 @@ import ForGround from "./CardBox/ForGround";
 
 function ReactCards() {
   return (
-    <div className="relative inset-0 w-full h-screen bg-teal-950">
+    <div className="h-screen bg-teal-950">
       <Background />
       <ForGround />
     </div>

@@ -6,7 +6,7 @@ import Music from "./useApi/Music";
 import LocomotiveScroll from "locomotive-scroll";
 
 function ApiPage() {
-  const [selectOption, setSelectOption] = useState("Covid Case of USA");
+  const [selectOption, setSelectOption] = useState("Games");
 
   const locomotiveScroll = new LocomotiveScroll();
 
@@ -29,8 +29,8 @@ function ApiPage() {
           <option value="Musics list">Musics list</option>
         </select>
 
-        {selectOption === "Covid Case of USA" && <CovidCasesUs />}
         {selectOption === "Games" && <GamingApi />}
+        {selectOption === "Covid Case of USA" && <CovidCasesUs />}
         {selectOption === "Anime Character" && <Anime />}
         {selectOption === "Musics list" && <Music />}
       </div>

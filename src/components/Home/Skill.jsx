@@ -13,47 +13,13 @@ import { MdSportsScore } from "react-icons/md";
 import { motion, useScroll } from "framer-motion";
 
 function Skill({ id }) {
-  const [IsVisible, setIsVisible] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const skillRef = useRef(null);
-
   // Litten increase opacity when interact skill section
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (skillRef.current) {
-      observer.observe(skillRef.current);
-    }
-
-    return () => {
-      if (skillRef.current) {
-        observer.unobserve(skillRef.current);
-      }
-    };
-  }, []);
 
   // Skill Scetion
   return (
-    <div
-      id={id}
-      ref={skillRef}
-      style={{ scaleX: scrollYProgress }}
-      className="container  bg-teal-950 w-full sm:max-w-full overflow-hidden  text-white"
-    >
+    <div className="container  bg-teal-950 w-full sm:max-w-full overflow-hidden  text-white">
       {/* Skill-wrapper  */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={IsVisible ? { opacity: 1 } : {}}
-        transition={{ duration: 1 }}
-        className="skill-wrapper w-full h-full"
-      >
+      <motion.div className="skill-wrapper w-full h-full">
         {/* field-wrpper */}
 
         <div className="filed-wrapper flex flex-row flex-wrap sm:flex-wrap md:flex-wrap  w-full sm:mx-auto items-center justify-center bg-black/50">
@@ -166,9 +132,11 @@ function Skill({ id }) {
             </div>
             <div className="personal-field px-6 sm:px-6 lg:px-14 xl:px-16 ">
               <div className="text-xl  font-bold mb-2  underline underline-offset-4 decoration-4">
-                Personal Skill
+                Nature
               </div>
-              <p className="text-center ">Creative - Active - Hard Work</p>
+              <p className="text-center ">
+                Creative - enthusiastic - Hard Working
+              </p>
             </div>
           </div>
 
@@ -242,7 +210,7 @@ function Skill({ id }) {
           {/* Professional Skill & Hobbies  */}
           <div className="Expertise-field flex flex-col flex-wrap justify-evenly  sm:w-1/3  py-5 rounded-md min-h-screen px-10 sm:px-2 lg:px-4 xl:px-14 ">
             <div>
-              <p className="text-xl text-white font-bold mb-3 underline underline-offset-4 decoration-4">
+              <p className="flex justify-center items-center text-xl text-white font-bold mb-3 underline underline-offset-4 decoration-4 ">
                 Professionl skills
               </p>
 
@@ -324,11 +292,11 @@ function Skill({ id }) {
 
             <div className="Interest&Hobies ">
               <div>
-                <p className="text-xl text-white font-bold underline underline-offset-4 decoration-4">
+                <p className="flex justify-center items-center text-xl text-white font-bold underline underline-offset-4 decoration-4">
                   Interested & Hobbies
                 </p>
               </div>
-              <div className="interest-wrapper min-w-full flex sm:flex-wrap items-center justify-between overflow-hidden px-16 sm:px-10 mt-4">
+              <div className="interest-wrapper min-w-full flex gap-2 sm:flex-wrap items-center justify-between overflow-hidden px-16 sm:px-10 mt-4">
                 <div className="w-full lg:w-1/4 flex flex-col items-center">
                   <FaTruckPlane className="text-2xl" />
                   <p>Traveling</p>

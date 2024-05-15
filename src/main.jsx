@@ -23,11 +23,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<Home />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/skill" element={<Skill />} />
       <Route path="/currencyconverter" element={<CurrencyConvertor />} />
       <Route path="/passwordgenerator" element={<PasswordGenerator />} />
-      <Route path="/react_cards" element={<React_Cards />} />
+      <Route path="/reactcards" element={<React_Cards />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/apipage" element={<ApiPage />} />
     </Route>

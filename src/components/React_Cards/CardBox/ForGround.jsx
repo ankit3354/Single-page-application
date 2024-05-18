@@ -36,11 +36,9 @@ function ForGround() {
       tag: { isOpen: true, tagTitle: "Upload Now", tagColor: "blue" },
     },
   ];
+
   return (
-    <div
-      ref={ref}
-      className="fixed w-full h-screen z-[3] flex gap-10 flex-wrap p-5"
-    >
+    <div ref={ref} className="w-full h-screen flex gap-10 flex-wrap p-5 ">
       {data.map((item, index) => (
         <Card data={item} key={index} reference={ref} />
       ))}

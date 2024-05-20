@@ -11,7 +11,7 @@ import React_Cards from "./React_Cards/ReactCards";
 
 export const Bio = {
   resume:
-    "https://drive.google.com/file/d/1vTQu04NBt3eIvdjAn2jpc3YERgkm2AMz/view?usp=sharing",
+    "https://drive.google.com/file/d/10dHcL1Dt0FXcDVwzmxWsRFDOzhYruJ4T/view?usp=sharing",
 };
 
 export {

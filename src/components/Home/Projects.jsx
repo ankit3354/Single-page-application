@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { TbArrowBadgeUp } from "react-icons/tb";
 import { TbArrowBadgeDown } from "react-icons/tb";
-import { motion, useScroll } from "framer-motion";
 
-function Projects({ id }) {
+function Projects() {
   const [showProject, setShowProject] = useState(false);
   const [startIndex, setStartIndex] = useState(3); // Initial start index for additional projects
 
@@ -12,43 +11,43 @@ function Projects({ id }) {
     {
       projectName: "Single Page Application",
       projectNo: "Project 1",
-      projectDetails: `Lorem Nesciunt accusantium deserunt nam. Lorem ipsum dolor sit
-      amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-      amet. accusantium deserunt nam. Lorem ipsum dolor sit amet
-      consectetur, adipisicing elit. Lorem ipsum dolor sit amet.`,
-
+      projectDetails: `I've showcased my ability to create dynamic, responsive web applications. The portfolio includes a variety of small projects such as a Calculator, API-handling React Cards, a Password Generator, and a Currency Converter. Each project demonstrates my proficiency in React.js, user-friendly UI design, and the seamless integration of external APIs.`,
       alt: "1Logo",
-      imgLink: "/ProjectImg/SinglePageApp.svg",
+      imgLink: "/ProjectImg/SinglepageApp.svg",
+      projectLink: "https://single-page-application-seven.vercel.app/",
     },
     {
-      projectName: "React Cards",
+      projectName: "Todo List",
       projectNo: "Project 2",
-      projectDetails: `Lorem Nesciunt accusantium deserunt nam. Lorem ipsum dolor sit
-      amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-      amet. accusantium deserunt nam. Lorem ipsum dolor sit amet
-      consectetur, adipisicing elit. Lorem ipsum dolor sit amet.`,
+      projectDetails: `Todo List application using Appwrite for data storage. It features a seamless toggle function for task management, showcasing my ability to integrate backend services and create interactive, user-friendly interfaces.`,
       alt: "2Logo",
-      imgLink: "/ProjectImg/ReactCards.svg",
+      imgLink: "/ProjectImg/TodoList.svg",
+      projectLink: "https://todo-list-vert-omega-47.vercel.app/",
     },
     {
       projectName: "Chat App",
       projectNo: "Project 3",
-      projectDetails: `Lorem Nesciunt accusantium deserunt nam. Lorem ipsum dolor sit
-      amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-      amet. accusantium deserunt nam. Lorem ipsum dolor sit amet
-      consectetur, adipisicing elit. Lorem ipsum dolor sit amet.`,
+      projectDetails: `Chat app project, users can engage in real-time conversations with authorized individuals, utilizing Appwrite for data storage. The app features seamless message deletion and a secure, efficient communication experience.`,
       alt: "3Logo",
       imgLink: "/ProjectImg/ChatApp.svg",
+      projectLink: "https://chat-app-ujea.vercel.app",
     },
     {
       projectName: "Histagram ",
       projectNo: "Project 4",
-      projectDetails: `Lorem Nesciunt accusantium deserunt nam. Lorem ipsum dolor sit
-      amet consectetur, adipisicing elit. Lorem ipsum dolor sit
-      amet. accusantium deserunt nam. Lorem ipsum dolor sit amet
-      consectetur, adipisicing elit. Lorem ipsum dolor sit amet.`,
+      projectDetails: `Histagram clone is similar to Instagram app where I've implemented a multi-page application with features like CRUD operations, an Explore section, profile management, post interactions (like, delete, save), and user authentication. This project highlights my skills in building comprehensive social media platforms with React and ensuring a smooth, engaging user experience.
+      `,
       alt: "4Logo",
-      imgLink: "/ProjectImg/SinglePageApp.svg",
+      imgLink: "/ProjectImg/Histagram.svg",
+      projectLink: "https://github.com/ankit3354/Histagram.git",
+    },
+    {
+      projectName: "Crypto Dashbord",
+      projectNo: "Project 5",
+      projectDetails: `Crypto Dashboard, Responsive ReactJS application using Chakra UI. It has three pages: Transactions, Dashboard, and Support, providing a comprehensive and user-friendly interface for managing crypto assets.`,
+      alt: "4Logo",
+      imgLink: "/ProjectImg/Dashboard.svg",
+      projectLink: "https://dashboard-pi-dun.vercel.app",
     },
   ];
 
@@ -68,6 +67,7 @@ function Projects({ id }) {
               projectDetails={project.projectDetails}
               alt={project.alt}
               imgLink={project.imgLink}
+              projectLink={project.projectLink}
               i={i}
             />
           </div>
@@ -84,6 +84,7 @@ function Projects({ id }) {
                   projectDetails={project.projectDetails}
                   alt={project.alt}
                   imgLink={project.imgLink}
+                  projectLink={project.projectLink}
                   i={i + startIndex}
                 />
               </div>

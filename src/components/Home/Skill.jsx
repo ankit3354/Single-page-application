@@ -182,23 +182,23 @@ function Skill({ id }) {
                 </p>
                 <div>
                   <div>
-                    <p>Degree in Bachelor of Business administration</p>
+                    <p>Degree in BBA from Sawami Vivekanand University</p>
                   </div>
                   <div>
                     <p>
-                      Higher Education Vidya Bhararti School, Rohini Delhi
+                      Higher Education from Vidya Bhararti School, Rohini Delhi
                       Sector-15 110089
                     </p>
                   </div>
                   <div>
                     <p>
-                      Completed Diploma in C/C++, Data Stucture by Aptech
+                      Completed Diploma in C/C++, and Data Stucture from Aptech
                       Pitampura Rohini Delhi 110085
                     </p>
                   </div>
                   <div>
                     <p>
-                      Completed Basic Course in HTML, CSS, JAVASCRIPT on
+                      Completed Basic Courses in HTML, CSS, and JAVASCRIPT from
                       LearnTube by careerNinja.
                     </p>
                   </div>

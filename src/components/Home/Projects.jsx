@@ -13,7 +13,7 @@ function Projects() {
       projectNo: "Project 1",
       projectDetails: `I've showcased my ability to create dynamic, responsive web applications. The portfolio includes a variety of small projects such as a Calculator, API-handling React Cards, a Password Generator, and a Currency Converter. Each project demonstrates my proficiency in React.js, user-friendly UI design, and the seamless integration of external APIs.`,
       alt: "1Logo",
-      imgLink: "/ProjectImg/SinglepageApp.svg",
+      imgLink: "/ProjectImg/SinglePageApp.svg",
       projectLink: "https://single-page-application-seven.vercel.app/",
     },
     {

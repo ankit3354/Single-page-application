@@ -432,19 +432,26 @@ function Arrorr() {
           Pop Music List
         </h1>
       </div>
-      <div className="flex flex-wrap justify-evenly items-center border gap-5">
+      <div className="flex flex-wrap justify-evenly items-center gap-5">
         {songs.map((song) => (
           <li
-            key={song["_id"]}
-            className="flex flex-wrap border justify-center items-center w-80 h-90 p-4 pb-6 rounded-lg"
+            key={song._id}
+            className="flex flex-wrap border justify-center items-center w-80 min-h-96 p-4 pb-6 rounded-lg overflow-hidden"
           >
-            <div className="w-full justify-center items-center">
-              <img src={song.img} alt="" className="w-72" />
+            <div>
+              <div className="w-full justify-center items-center">
+                <img src={song.img} alt="" className="w-72" />
+              </div>
+              <div>
+                <p className="px-2 py-2 text-xl font-bold font-mono text-cyan-300">
+                  {song.src?.name}
+                  {song.pl?.name}
+                </p>
+                <p className="px-2 py-2 text-lg font-medium text-white border rounded-xl bg-teal-800 hover:bg-teal-700 focus:bg-teal-700">
+                  <a href={song.src?.id}>Youtube Link</a>
+                </p>
+              </div>
             </div>
-            <p className="px-2 font-mono text-xl py-2 font-semibold text-white">
-              <strong className="">Song</strong> : {song.name}
-            </p>
-            <p className="px-2 py-2 text-xl font-bold font-mono text-cyan-300">{song.uNm}</p>
           </li>
         ))}
       </div>

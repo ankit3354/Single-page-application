@@ -296,7 +296,7 @@ function Skill({ id }) {
                   Interested & Hobbies
                 </p>
               </div>
-              <div className="interest-wrapper min-w-full flex gap-2 sm:flex-wrap items-center justify-between overflow-hidden  px-10 sm:px-16 mt-4">
+              <div className="interest-wrapper min-w-full flex sm:flex-wrap items-center justify-between overflow-hidden  mt-4">
                 <div className="w-full lg:w-1/4 flex flex-col items-center">
                   <FaTruckPlane className="text-2xl" />
                   <p>Traveling</p>

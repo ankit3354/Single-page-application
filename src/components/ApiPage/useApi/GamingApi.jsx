@@ -466,9 +466,9 @@ function GamingApi() {
       </div>
       <div className="flex flex-wrap justify-center items-center text-center">
         {games.map((game) => (
-          <div key={game.gameID} className="border text-white">
+          <div key={game.gameID} className="text-white">
             <ul className="p-4 rounded-md flex">
-              <li className="rounded-md grid justify-center text-center sm:items-center py-4 w-80 h-96">
+              <li className="rounded-md border p-3 bg-yellow-900/50 grid justify-center text-center sm:items-center py-4 w-80 h-96">
                 <div className="flex items-center justify-center w-full">
                   <img
                     src={game.thumb}
@@ -479,9 +479,9 @@ function GamingApi() {
                 <button className="m-4">
                   <a
                     href={game.metacriticLink}
-                    className="border rounded-md p-2 px-4 sm:hover:bg-gray-800"
+                    className="border rounded-md p-2 px-4 bg-teal-800 hover:bg-teal-700 active:bg-teal-700"
                   >
-                    visit site
+                    Game Link
                   </a>
                 </button>
                 <h1 className="p-2 font-medium text-xl">Game : {game.title}</h1>
